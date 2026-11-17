@@ -152,6 +152,27 @@ int main()
 
     while (!glfwWindowShouldClose(window))
     {
+        //Game loop
+        
+        //Update
+        if(glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS){
+            //cout << "A" << endl;
+            modelToWorld[3] -= .001f;
+        }
+        if(glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS){
+            //cout << "A" << endl;
+            modelToWorld[3] += .001f;
+        }
+        if(glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS){
+            //cout << "A" << endl;
+            modelToWorld[7] += .001f;
+        }
+        if(glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS){
+            //cout << "A" << endl;
+            modelToWorld[7] -= .001f;
+        }
+
+        //Draw
         glClearColor(0.f, 0.f, 0.f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
